@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Order Details</title>
+	<!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/headerandfooter.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+</head>
+<body>
+	<header class="">
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						        <span class="sr-only"> Toggle navigation</span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						        <span class="icon-bar"></span>
+						      </button>
+						      <a class="navbar-brand" href="#"><img src="images/header-logo.png" class="img-responsive" alt="header logo"></a>
+						</div>
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<form class="navbar-form navbar-left">
+						        <div class="form-group">
+						          	<input type="text" class="form-control" placeholder="Find Services">
+						        </div>
+						    </form>
+						    <ul class="nav navbar-nav navbar-right">
+						    	<li class="user-details">
+						    		<a href="#">
+						    			<ul class="list-unstyled">
+						    				<li class="user-pic"><img src="images/user-pic.png" class="img-esponsive img-circle" alt="user-logo"></li>
+						    				<li class="user-name">
+						    					<p class="name"> W2 Daemon</p>
+							    				<div class="user-bar">
+							    					<span class="badge"> 0</span>
+							    					<div class="level-bar"><span class="level-points"> 10</span></div>
+							    				</div>
+							    			</li>	
+						    			</ul>
+						    		</a>
+						    	</li>
+						    	<li class="messages text-center">
+						    		<a href="#">
+						    			<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>	
+						    		</a>
+						    	</li>
+						    	<li class="new-service-btn"><button class="btn btn-default btn-primary" type="button"> CREATE NEW SERVICE</button></li>
+						    </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<main class="main">
+		<div class="container">
+
+			<!-- create service-->
+			<section class="create-service">
+				<h2> Create a new service</h2>
+
+				<div class="row">
+					<div class="box-bordered" id="new-service-container">
+						<form id="new-service" class="form-horizontal" method="post">
+
+							<!-- title -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Title</label>
+							    <div class="col-xs-12 col-sm-9">
+							    	<input type="text" class="form-control" id="">
+							    	<p class="text-right"> 0/100 characters (min. 10)</p>
+							    	<p> * Please spell out all acronym's, not every visitor on the site will know what you're referring to when you say PLR, OFA, CF, etc.</p>
+							    </div>
+							</div><!-- end title-->
+
+							<!-- price -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Price</label>
+							    <div class="col-xs-6 col-sm-2">
+								    <div class="input-group">
+								        <div class="input-group-addon"> $</div>
+								       	<input type="text" class="form-control" id="">
+								    </div>
+								</div>
+							</div><!-- end price-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- upload images -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Images</label>
+							    
+							    <div class="col-xs-12 col-sm-9">
+							    	<div class="img-container">
+							    		<div class="row">
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<div class="overlay">
+							    					<div class="btn-group-vertical" role="group">
+								    					<button class="btn btn-success btn-sm"> Make Default</button>
+								    					<button class="btn btn-danger btn-sm"> Remove</button>
+								    					<button class="btn btn-default btn-sm"> Preview</button>
+								    				</div>
+							    				</div>
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    			<div class="col-xs-6 col-sm-3">
+							    				<img src="images/tree.jpg" class="img-responsive img-thumbnail">
+							    				<!-- <a class="remove-extra remove-img" href="#"><i class="glyphicon glyphicon-remove"></i></a> -->
+							    				
+							    			</div>
+							    		</div>
+							    	</div>
+							    	<p> * Click on an image to make it the default</p>
+							    </div>
+
+							    <div class="col-xs-12 col-sm-9 col-sm-offset-3">
+							    	<button class="btn btn-default add-images-btn" value="Input" type="file"> Add Image</button>
+							    </div>
+							</div><!-- end upload images-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- youtube -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> YouTube</label>
+							    <div class="col-xs-12 col-sm-9">
+							    	<input type="text" class="form-control" id="" placeholder="Add YouTube video link">
+							    </div>
+							</div><!-- end youtube-->
+
+							<!-- select category -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Category</label>
+							    <div class="col-xs-12 col-sm-9">
+							    	<select class="form-control" name="" id="">
+											<option value="">Select category</option>
+											<option value="22">Funnel Strategy</option>
+											<option value="23">Funnel Building</option>
+											<option value="24">Backpack</option>
+											<option value="25">Graphic Design</option>
+											<option value="26">Copywriting</option>
+											<option value="27">Music/Audio</option>
+											<option value="28">Custom Code</option>
+											<option value="29">Video/Animation</option>
+											<option value="30">Advertising</option>
+											<option value="31">Agencies</option>
+									</select>
+							    </div>
+							</div><!-- end select category-->
+
+							<!-- select subcategory-->
+							<div class="form-group">
+								<label class="col-xs-12 col-sm-3 control-label" for="">Sub category</label>
+								<div class="col-xs-12 col-sm-9">
+									<select class="form-control" name="" id="">
+										<option value=""></option>
+									</select>
+
+									<select class="form-control hide" name="" id="">
+										<option value="88">Strategy Call</option>
+  										<option value="89">Funnel Audibles</option>
+  										<option value="90">Funnel Optimization</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">
+										<option value="92">Tripwire Funnel</option>
+										<option value="93">Product Launch Funnel</option>
+										<option value="94">Webinar Funnel</option>
+										<option value="95">Automated Webinar Funnel</option>
+										<option value="96">Application Funnel</option>
+										<option value="97">Video Sales Letter Funnel</option>
+										<option value="98">Membership Funnel</option>
+										<option value="132">Physical Assets</option>
+										<option value="146">Custom Funnel Build</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">
+										<option value="99">Setup Affiliate Program</option>
+  										<option value="100">Create Affiliante Center</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">  
+										<option value="101">Logos</option>
+								    	<option value="102">Template Design</option>
+								    	<option value="103">Wireframes</option>
+								    	<option value="104">Webinar Slides</option>
+								    	<option value="105">Ecovers</option>
+								    	<option value="106">Advertising Assets</option>
+								    	<option value="107">Funnel Elements</option>
+								    	<option value="138">Flyer Designer</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">  
+										<option value="108">Headlines</option>
+										<option value="109">Sales Letters</option>
+										<option value="110">Emails</option>
+										<option value="111">Explainer Video Script</option>
+										<option value="112">Ads</option>
+										<option value="113">Video Sales Letter Script</option>
+										<option value="114">Webinar Script</option>
+										<option value="130">General Copywriting</option>
+										<option value="137">Blog Writer </option>
+										<option value="147">Ghostwriting</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">  
+										<option value="115">Audio Editing</option>
+										<option value="116">Podcasting</option>
+										<option value="129">Voiceover</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">  
+										<option value="117">Custom Css</option>
+										<option value="118">Pre Launch Testing</option>
+										<option value="119">Fix My Funnel</option>
+										<option value="120">Setup Blog</option>
+									</select>
+
+									<select class="form-control hide" name="" id="">  
+										<option value="121">Vsl Creation</option>
+										<option value="122">Explainer Video</option>
+										<option value="123">Video Editing</option>
+										<option value="148">Intros/Outros</option>
+										<option value="149">Animation</option>
+									</select>		
+
+									<select class="form-control hide" name="" id="">  
+										<option value="124">Dream 100</option>
+									    <option value="125">Instagram</option>
+									    <option value="126">Google</option>
+									    <option value="127">Facebook</option>
+									    <option value="128">You Tube</option>
+									    <option value="131">Pinterest</option>
+									    <option value="133">Ppc Specialist</option>
+									    <option value="134">Lead Generation Specialist</option>
+									    <option value="135">Ad Buyer</option>
+									    <option value="136">Social Media Consultant</option>
+									    <option value="140">B2 B Marketer</option>
+									    <option value="141">Linked In Marketer</option>
+									    <option value="142">Youtube Marketer</option>
+									    <option value="143">Reddit Marketer</option>
+									</select>	
+
+									<select class="form-control hide" name="" id="">  
+										<option value="144">Business Services</option>
+										<option value="145">General</option>
+										<option value="139">Seo Specialist</option>
+									</select>
+								</div>
+							</div><!-- end select subcategory-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- description -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Description</label>
+							    <div class="col-xs-12 col-sm-9">
+
+							    	<ul class="wysihtml5-toolbar list-inline">
+										<li class="dropdown">
+											<a class="btn btn-default dropdown-toggle " data-toggle="dropdown">
+											   	<span class="glyphicon glyphicon-font"></span>
+											   	<span class="current-font">Normal text</span>
+											   	<b class="caret"></b>
+											</a>
+
+											<ul class="dropdown-menu">
+											    <li>
+											    	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p" tabindex="-1" href="javascript:;" unselectable="on">Normal text</a>
+											    </li>
+											    <li>
+											    	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" tabindex="-1" href="javascript:;" unselectable="on">Heading 1</a>
+											    </li>
+											    <li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" tabindex="-1" href="javascript:;" unselectable="on">Heading 2</a>
+												</li>
+												<li>
+													<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" tabindex="-1" href="javascript:;" unselectable="on">Heading 3</a>
+												</li>
+												<li>
+													<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4" tabindex="-1" href="javascript:;" unselectable="on">Heading 4</a>
+												</li>
+												<li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h5" tabindex="-1" href="javascript:;" unselectable="on">Heading 5</a>
+												</li>
+												<li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h6" tabindex="-1" href="javascript:;" unselectable="on">Heading 6</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="dropdown">
+											<a class="btn btn-default dropdown-toggle " data-toggle="dropdown" tabindex="-1">
+												<span class="current-color">Black</span>
+												<b class="caret"></b>
+											</a>
+											<ul class="dropdown-menu">
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="black"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="black" href="javascript:;" unselectable="on">Black</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="silver"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="silver" href="javascript:;" unselectable="on">Silver</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="gray"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="gray" href="javascript:;" unselectable="on">Grey</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="maroon"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="maroon" href="javascript:;" unselectable="on">Maroon</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="red"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red" href="javascript:;" unselectable="on">Red</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="purple"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="purple" href="javascript:;" unselectable="on">Purple</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="green"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green" href="javascript:;" unselectable="on">Green</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="olive"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="olive" href="javascript:;" unselectable="on">Olive</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="navy"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="navy" href="javascript:;" unselectable="on">Navy</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="blue"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue" href="javascript:;" unselectable="on">Blue</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="orange"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="orange" href="javascript:;" unselectable="on">Orange</a></li>
+											</ul>
+										</li>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-wysihtml5-command="bold" title="CTRL+B" tabindex="-1" href="javascript:;" unselectable="on">Bold</a>
+												<a class="btn btn-default" data-wysihtml5-command="italic" title="CTRL+I" tabindex="-1" href="javascript:;" unselectable="on">Italic</a>
+												<a class="btn btn-default" data-wysihtml5-command="underline" title="CTRL+U" tabindex="-1" href="javascript:;" unselectable="on">Underline</a>
+												<a class="btn btn-default" data-wysihtml5-command="small" title="CTRL+S" tabindex="-1" href="javascript:;" unselectable="on">Small</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-wysihtml5-command="insertUnorderedList" title="Unordered list" tabindex="-1" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-list"></span>
+												</a>
+												<a class="btn btn-default" data-wysihtml5-command="insertOrderedList" title="Ordered list" tabindex="-1" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-th-list"></span>
+												</a>
+												<a class="btn btn-default" data-wysihtml5-command="Outdent" title="Outdent" tabindex="-1" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-indent-right"></span>
+												</a>
+												<a class="btn btn-default" data-wysihtml5-command="Indent" title="Indent" tabindex="-1" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-indent-left"></span>
+												</a>
+											</div>
+										</li>
+
+										<div class="modal fade" id="bootstrap-wysihtml5-insert-image-modal" aria-hidden="true" style="display: none;">
+											<div class="modal-dialog modal-lg">
+												<div class="modal-content">
+													<div class="modal-header text-center">
+														<a class="close" data-dismiss="modal">x</a>
+														<h3> Insert Image from Library</h3>
+													</div>
+												
+													<div class="modal-body">
+														<span class="btn btn-success fileinput-button">
+															<i class="glyphicon glyphicon-plus"></i> Add files...
+														</span>
+														<br>
+														<span> (1 Mb max)</span>
+														<br>
+														<div id="progress" class="progress">
+															<div class="progress-bar progress-bar-success"></div>
+														</div>
+														<div id="files" class="files"></div>
+													</div>
+
+													<div class="modal-footer" id="img-modal">
+														<div class="row">
+															<h3 class="text-center">Available Images</h3>
+															<div class="col-md-12">
+																<div id="img-container text-center">
+																	<div class="row">
+																		
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default custom-icon" id="img-btn-add" title="Insert Image" data-toggle="modal" data-target="#bootstrap-wysihtml5-insert-image-modal">
+													<span class="glyphicon glyphicon-picture"></span>
+												</a>
+											</div>
+										</li>
+
+										<div class="modal fade" id="bootstrap-wysihtml5-insert-video-modal" aria-hidden="true" style="display: none;">
+											<div class="modal-dialog ">
+												<div class="modal-content">
+													<div class="modal-header">
+														<a class="close" data-dismiss="modal">×</a>
+														<h3>Insert YouTube video</h3>
+													</div>
+													<div class="modal-body">
+														<div class="form-group">
+															<input value="http://" class="bootstrap-wysihtml5-insert-video-url form-control" data-wysihtml5-dialog-field="src" id="video-href">
+														</div>
+													</div>
+													<div class="modal-footer">
+														<a class="btn btn-default" data-dismiss="modal" data-wysihtml5-dialog-action="cancel" href="#">Cancel</a>
+														<a class="btn btn-primary" data-dismiss="modal" data-wysihtml5-command="insertHTML" onclick="insertVideo()" href="javascript:;" id="insert-vid" unselectable="on">Insert video</a>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-toggle="modal" data-target="#bootstrap-wysihtml5-insert-video-modal" title="Youtube video">
+													<span class="glyphicon glyphicon-facetime-video"></span>
+												</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-wysihtml5-command="justifyLeft" title="Justify left" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-align-left"></span>
+												</a>
+												<a class="btn btn-default" data-wysihtml5-command="justifyCenter" title="Justify center" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-align-center"></span>
+												</a>
+											</div>
+										</li>
+									</ul>
+
+							    	<textarea class="form-control" rows="10"></textarea>
+							    	<p class="text-right"> 0/1000 characters (min. 100)</p>
+							    	<p> * Be as descriptive as you can on what it is your actually providing to potential buyers. Let them know exactly what to expect after they purchase, what are your deliverables, what are your timelines, what you need from them prior to starting. Set all the expectations up front, to avoid any confusion after they purchase. If you haven't already, please read through our <a href=""> user guidelines</a>.</p>
+							    </div>
+							</div><!-- end description-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- instruction -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Instructions to Buyers</label>
+							    <div class="col-xs-12 col-sm-9">
+
+							    	<ul class="wysihtml5-toolbar list-inline">
+										<li class="dropdown">
+											<a class="btn btn-default dropdown-toggle " data-toggle="dropdown">
+											   	<span class="glyphicon glyphicon-font"></span>
+											   	<span class="current-font">Normal text</span>
+											   	<b class="caret"></b>
+											</a>
+
+											<ul class="dropdown-menu">
+											    <li>
+											    	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="p" tabindex="-1" href="javascript:;" unselectable="on">Normal text</a>
+											    </li>
+											    <li>
+											    	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h1" tabindex="-1" href="javascript:;" unselectable="on">Heading 1</a>
+											    </li>
+											    <li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h2" tabindex="-1" href="javascript:;" unselectable="on">Heading 2</a>
+												</li>
+												<li>
+													<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h3" tabindex="-1" href="javascript:;" unselectable="on">Heading 3</a>
+												</li>
+												<li>
+													<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h4" tabindex="-1" href="javascript:;" unselectable="on">Heading 4</a>
+												</li>
+												<li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h5" tabindex="-1" href="javascript:;" unselectable="on">Heading 5</a>
+												</li>
+												<li>
+												   	<a data-wysihtml5-command="formatBlock" data-wysihtml5-command-value="h6" tabindex="-1" href="javascript:;" unselectable="on">Heading 6</a>
+												</li>
+											</ul>
+										</li>
+
+										<li class="dropdown">
+											<a class="btn btn-default dropdown-toggle " data-toggle="dropdown" tabindex="-1">
+												<span class="current-color">Black</span>
+												<b class="caret"></b>
+											</a>
+											<ul class="dropdown-menu">
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="black"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="black" href="javascript:;" unselectable="on">Black</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="silver"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="silver" href="javascript:;" unselectable="on">Silver</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="gray"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="gray" href="javascript:;" unselectable="on">Grey</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="maroon"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="maroon" href="javascript:;" unselectable="on">Maroon</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="red"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="red" href="javascript:;" unselectable="on">Red</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="purple"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="purple" href="javascript:;" unselectable="on">Purple</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="green"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="green" href="javascript:;" unselectable="on">Green</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="olive"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="olive" href="javascript:;" unselectable="on">Olive</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="navy"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="navy" href="javascript:;" unselectable="on">Navy</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="blue"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="blue" href="javascript:;" unselectable="on">Blue</a></li>
+												<li><div class="wysihtml5-colors" data-wysihtml5-command-value="orange"></div><a class="wysihtml5-colors-title" data-wysihtml5-command="foreColor" data-wysihtml5-command-value="orange" href="javascript:;" unselectable="on">Orange</a></li>
+											</ul>
+										</li>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-wysihtml5-command="bold" title="CTRL+B" tabindex="-1" href="javascript:;" unselectable="on">Bold</a>
+												<a class="btn btn-default" data-wysihtml5-command="italic" title="CTRL+I" tabindex="-1" href="javascript:;" unselectable="on">Italic</a>
+												<a class="btn btn-default" data-wysihtml5-command="underline" title="CTRL+U" tabindex="-1" href="javascript:;" unselectable="on">Underline</a>
+												<a class="btn btn-default" data-wysihtml5-command="small" title="CTRL+S" tabindex="-1" href="javascript:;" unselectable="on">Small</a>
+											</div>
+										</li>
+
+										<li>
+											<div class="btn-group">
+												<a class="btn btn-default" data-wysihtml5-command="justifyLeft" title="Justify left" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-align-left"></span>
+												</a>
+												<a class="btn btn-default" data-wysihtml5-command="justifyCenter" title="Justify center" href="javascript:;" unselectable="on">
+													<span class="glyphicon glyphicon-align-center"></span>
+												</a>
+											</div>
+										</li>
+									</ul>
+
+							    	<textarea class="form-control" rows="10"></textarea>
+							    	<p> * After someone has purchased your service listing, this message will be sent to them immediately. These customers just finished purchasing your product, so we recommend you thank them for their purchase and vote of confidence in you. In the message be very clear on exactly what you need from them prior to starting on the service. Set the proper expectations as far as your timelines and when they should expect to have your service completed.</p>
+							    </div>
+							</div><!-- end instruction-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- Estimated duration -->
+							<div class="form-group">
+							    <label for="" class="col-xs-6 col-sm-3 control-label"> Estimated Duration</label>
+							    <div class="col-xs-6 col-sm-2">
+								    <div class="input-group">
+								       	<input type="text" class="form-control" id="">
+								        <div class="input-group-addon"> days</div>
+								    </div>
+								</div>
+							</div><!-- end Estimated duration-->
+
+							<!-- Guaranteed duration -->
+							<div class="form-group">
+							    <label for="" class="col-xs-6 col-sm-3 control-label"> Guaranteed Delivery</label>
+							    <div class="col-xs-6 col-sm-2">
+								    <div class="input-group">
+								       	<input type="text" class="form-control" id="">
+								        <div class="input-group-addon"> days</div>
+								    </div>
+								</div>
+								<!-- <div class="col-xs-12 col-xs-offsett-6 col-sm-7">
+									<p> * Guaranteed duration cannot be more than 5 days than the estimated duration. If an order is not completed in this time, a refund will automatically be issued.</p>
+								</div> -->
+							</div><!-- end Guaranteed duration-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- Refund Policy -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Refund Policy <span class="text-muted"> (optional)</span></label>
+							    <div class="col-xs-12 col-sm-9">
+							    	<textarea class="form-control" rows="10"></textarea>
+							    	<p> * If you offer a refund policy, we recommend you also include it in your main service description. It is a selling point and will help to increase conversions.</p>
+							    </div>
+							</div><!-- end Refund Policy-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- Max orders queued at a time -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label"> Max orders queued at a time <span class="text-muted"> (optional)</span></label>
+							    <div class="col-xs-4 col-sm-2">
+								    <div class="input-group">
+								       	<input type="text" class="form-control" id="">
+								    </div>
+								</div>
+								<div class="col-xs-8 col-sm-7">
+									<p> * This is the maximum amount of orders you're able to work on at any given moment. If your active orders hit this limit, your listing will be temporarily paused until you're able to get your queue down below this limit.</p>
+								</div>
+							</div><!-- end Max orders queued at a time -->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- extras -->
+							<div class="form-group">
+							    <label for="" class="col-xs-12 col-sm-3 control-label extras-title"> Extras</label>
+							    
+							    <div class="col-xs-12 col-sm-9">
+							    	<div class="row">
+								    	<div class="form-group">
+										    <label for="" class="col-sm-2 control-label"> Title</label>
+										    <div class="col-sm-6">
+											    <input type="text" class="form-control" id="">
+											</div>
+										</div>
+										<div class="form-group">
+										    <label for="" class="col-sm-2 control-label"> Price</label>
+										    <div class="col-sm-6">
+											    <div class="input-group">
+											        <div class="input-group-addon"> $</div>
+											       	<input type="text" class="form-control" id="">
+											    </div>
+											</div>
+										</div>
+										<div class="form-group">
+										    <label for="" class="col-sm-2 control-label"> Duration</label>
+										    <div class="col-sm-6">
+											    <div class="input-group">
+											       	<input type="text" class="form-control" id="">
+											        <div class="input-group-addon"> days</div>
+											    </div>
+											</div>
+										</div>
+									</div>
+
+								    <a class="remove-extra pull-right remove-extra-btn" href="#"> Remove extra <i class="glyphicon glyphicon-remove"></i></a>
+							    </div>
+
+							    <button class="btn btn-default btn-lg add-extra-btn"> <i class="glyphicon glyphicon-plus"></i> Add Extra</button>
+							</div><!-- end extras-->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- gdpr checkbox -->
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" value="">
+							    	By checking this box, I agree to the <a href=""> Responsible User Guidelines</a>
+								</label>
+							</div><!-- end gdpr checkbox -->
+
+							<div class="divider" role="separator"></div>
+
+							<!-- btn save -->
+							<div class="btn-group">
+								<button type="submit" class="btn btn-primary btn-lg"> Save as Draft</button>
+								<button type="submit" class="btn btn-primary btn-lg"> Save &amp; Submit</button>
+							</div><!-- end btn save -->
+
+							<div class="divider" role="separator"></div>
+
+							<h5> Feel free to <a href=""> Contact Us</a> if you have any troubles creating a service!</h5>
+						</form>
+					</div>
+				</div>	
+			</section><!-- end create service-->
+		</div>
+	</main>
+
+	<footer class="">
+		<div class="container-fluid bg-light">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">	
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							        <span class="sr-only"> Toggle navigation</span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							        <span class="icon-bar"></span>
+							      </button>
+							      <a class="navbar-brand" href="#"><img src="images/footer-logo.png" class="img-responsive" alt="footer logo"></a>
+							</div>
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li class=""><a href=""> Contact Us</a></li>
+									<li class=""><a href=""> How to Buy</a></li>
+									<li class=""><a href=""> How to Sell</a></li>
+									<li class=""><a href=""> FAQ</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>	
+		</div>
+			
+		<div class="container-fluid bg-dark">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="list-inline">
+							<li class="list-item"><a href=""> Privacy</a></li>
+							<li class="list-item"><a href=""> Terms of Service</a></li>
+							<li class="list-item"><a href=""> Responsible User Guideline</a></li>
+							<li class="list-item"><a href=""> DMCA</a></li>
+							<li class="list-item"><a href=""> Income Disclosure</a></li>
+							<li class="list-item copyright"><a href=""> Copyright &amp; Funnel Rolodex, 2019</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>		
+		</div>
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>
+
+							
