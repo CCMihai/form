@@ -145,13 +145,13 @@ main {
 	background-color: #fff;
 }
 
-.btn-group-vertical button {
+.save-btn button {
 	border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
     border-top-left-radius: 4px !important;
     border-bottom-left-radius: 4px !important;
 }
-.btn-group-vertical {
+.save-btn {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -161,14 +161,17 @@ main {
 	-webkit-box-pack: center;
 	    -ms-flex-pack: center;
 	        justify-content: center;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	-webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
 	padding: 10px 50px;
 }
-.btn-group-vertical button {
+.btn-group button {
 	margin: 5px 0;
+}
+.save-btn button {
+	margin: 0 15px;
 }
 figure {
 	position: relative;
