@@ -25,6 +25,8 @@ body {
 main {
 	padding-top: 115px;
 }
+
+
 /* form */
 .create-service h2 {
 	font-size: 26px;
@@ -83,10 +85,10 @@ main {
 	font-size: 16px;
 	margin-right: 10px;
 }
-#new-service-container .add-images-btn {
+#new-service-container .add-media-btn {
 	margin-top: 15px;
 }
-#new-service-container .add-images-btn:hover,
+#new-service-container .add-media-btn:hover,
 #new-service-container .add-extra-btn:hover {
 	background-color: #fff;
 }
@@ -116,42 +118,46 @@ main {
 	        justify-content: center;
 	margin: 0 auto;
 }
-#new-service-container .list-inline {
+#new-service-container .list-inline.wysihtml5-toolbar {
 	margin-left: 0;
 	border: 1px solid #dbdbdb;
 	border-bottom: 0;
 	margin-bottom: 0;
 	padding: 10px 10px;
 }
-#new-service-container .list-inline>li {
+#new-service-container .wysihtml5-toolbar.list-inline>li {
 	padding-right: 0;
 	padding-left: 0;
+	margin-bottom: 5px;
 }
-#new-service-container .img-container img {
+.list-inline.wysihtml5-toolbar .btn-default {
+	padding: 5px 10px;
+}
+#new-service-container .img-container .img-thumbnail,
+#new-service-container .video-container .embed-responsive,
+#new-service-container .audio-container audio {
 	margin-bottom: 10px;
 }
 #new-service-container .img-container .img-thumbnail.selected {
-	border-color: #a94442;
+	border: 2px solid #a94442;
+	padding: 3px;
 }
-#new-service-container .img-container .col-xs-6 {
-	padding-right: 5px;
-	padding-left: 5px;
+#new-service-container .media-container {
 	position: relative;
 }
-#new-service-container .img-container .remove-img {
-	position: absolute;
-	top: 2px;
-	right: 7px;
-	background-color: #fff;
+#new-service-container .media-container audio {
+	width: 100%;
+	max-width: 250px;
+	display: block;
+	outline: none;
 }
-
-.save-btn button {
+#new-service-container .save-btn button {
 	border-top-right-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
     border-top-left-radius: 4px !important;
     border-bottom-left-radius: 4px !important;
 }
-.save-btn {
+#new-service-container .save-btn {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -167,22 +173,20 @@ main {
            flex-direction: row;
 	padding: 10px 50px;
 }
-.btn-group button {
-	margin: 5px 0;
-}
-.save-btn button {
+
+#new-service-container .save-btn button {
 	margin: 0 15px;
 }
-figure {
+#new-service-container figure {
 	position: relative;
 }
-figure:hover figcaption {
+#new-service-container figure:hover figcaption {
 	opacity: 1;
 	-webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-figcaption {
+#new-service-container figcaption {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -207,7 +211,7 @@ figcaption {
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-figcaption button {
+#new-service-container figcaption button {
 	width: 100px;
 	margin: 5px auto;
 }
